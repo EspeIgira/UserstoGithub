@@ -8,9 +8,21 @@ p{
     
     
 }
+img{
+   border: 3px solid #f1f1f1;
+   border-radius: 50%;     
+}
 .userinfo{
     font-family: 'Arial Narrow Bold';
     margin-left:500px;
-    margin-top:-55px;
-   
+    margin-top:-55px; 
+}
+div p {
+    margin-left:150px;
+}
+div a {
+    margin-left:150px;
+}
+a :hover{
+     color:yellowgreen;
 }
