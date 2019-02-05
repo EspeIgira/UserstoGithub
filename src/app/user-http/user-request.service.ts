@@ -19,7 +19,7 @@ userRequest(){
 interface ApiResponse{
   avatar_url:string;
   name:string;
-  public_repospublic:number;
+  public_repos:number;
   followers:number;
   following:number;
   location:string;
@@ -27,11 +27,11 @@ interface ApiResponse{
       
 }
 let promise =new Promise((resolve,reject)=>{
-  this.http.get<ApiResponse>('https://api.github.com/users/daneden').toPromise().then(response=>{
+  this.http.get<ApiResponse>('https://api.github.com/users/EspeIgira').toPromise().then(response=>{
            
   this.user.avatar_url=response.avatar_url
   this.user.name=response.name
-  this.user.public_repospublic=response.public_repospublic
+  this.user.public_repos=response.public_repos
   this.user.followers=response.followers
   this.user.following=response.following
   this.user.location=response.location
@@ -44,7 +44,7 @@ let promise =new Promise((resolve,reject)=>{
   error=>{
     this.user.avatar_url=""
     this.user.name=""
-    this.user.public_repospublic=0
+    this.user.public_repos=0
     this.user.followers=0
     this.user.following=0
     this.user.location=""
