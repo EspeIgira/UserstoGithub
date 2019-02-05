@@ -13,7 +13,7 @@ import {environment} from '../../environments/environment'
 export class UserFormComponent implements OnInit{
 
 
-  newUserApi=new UserApi("",0,0,"","");
+  newUserApi=new UserApi("",0,0,"","","");
   user:UserApi;
 
 
@@ -27,7 +27,7 @@ export class UserFormComponent implements OnInit{
       followers:number;
       following:number;
       location:string;
-      
+      html_url:string;
       
   }
     this.http.get<ApiResponse>("https://api.github.com/users/daneden?access_token"+ environment.apiKey ).subscribe(data=>{
