@@ -1,4 +1,4 @@
 export class UserApi {
     
-    constructor(public Repository:number, public followers:number, public following:number){}
+    constructor(public name:string, public followers:number, public following:number, public location:string,public avatar_url:string){}
 }

@@ -13,7 +13,7 @@ import {environment} from '../../environments/environment'
 export class UserFormComponent implements OnInit{
 
 
-  newUserApi=new UserApi(0,0,0);
+  newUserApi=new UserApi("",0,0,"","");
   user:UserApi;
 
 
@@ -22,16 +22,19 @@ export class UserFormComponent implements OnInit{
   ngOnInit() {
 
     interface ApiResponse{
-      Repository:number;
+      avatar_url:string;
+      name:string;
       followers:number;
       following:number;
+      location:string;
+      
       
   }
     this.http.get<ApiResponse>("https://api.github.com/users/daneden?access_token"+ environment.apiKey ).subscribe(data=>{
-      this.user= new UserApi(data.Repository,data.followers,data.following)
+      this.user= new UserApi(data.name,data.followers,data.following,data.location,data.avatar_url)
    
     },err=>{
-      this.user= new UserApi(0,0,0)
+      this.user= new UserApi("Daniel Eden",0,0,"San Francisco, CA","https://avatars3.githubusercontent.com/u/439365?v=4")
       console.log("Error occured ")
   })
 }

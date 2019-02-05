@@ -8,11 +8,6 @@ import {UserApi} from './user-api';
 })
 export class AppComponent {
   title = 'UserstoGithub';
-  UserApi = [
-    new UserApi(18,60,10),
-    new UserApi(20,31,49),
-    new UserApi(30,60,50),
-   
-]
+  UserApi = []
 }
 
