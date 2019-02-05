@@ -5,7 +5,12 @@ button {
 p{
     color:white;  
     font-family: 'Arial Narrow Bold';
+    
+    
 }
-blockquote{
+.userinfo{
     font-family: 'Arial Narrow Bold';
+    margin-left:500px;
+    margin-top:-55px;
+   
 }
