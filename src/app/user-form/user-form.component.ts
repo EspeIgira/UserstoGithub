@@ -34,7 +34,7 @@ export class UserFormComponent implements OnInit{
       this.user= new UserApi(data.name,data.followers,data.following,data.location,data.avatar_url,data.html_url)
    
     },err=>{
-      this.user= new UserApi("Daniel Eden",0,0,"San Francisco, CA","https://avatars3.githubusercontent.com/u/439365?v=4")
+      this.user= new UserApi("Daniel Eden",0,0,"San Francisco, CA","https://avatars3.githubusercontent.com/u/439365?v=4","https://github.com/daneden")
       console.log("Error occured ")
   })
 }
