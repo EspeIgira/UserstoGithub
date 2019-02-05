@@ -4,7 +4,8 @@ button {
 }
 p{
     color:white;  
+    font-family: 'Arial Narrow Bold';
 }
 blockquote{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Arial Narrow Bold';
 }
