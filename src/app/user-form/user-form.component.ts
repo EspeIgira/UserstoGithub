@@ -15,16 +15,24 @@ import {UserRequestService} from '../user-http/user-request.service'
 })
 export class UserFormComponent implements OnInit{
 
-  user:UserApi;
 
+
+  user:UserApi;
+  Search="";
+
+  Submit(){
+    this.userService.userRequest(this.Search);
+   //console.log(this.Search);
+}
 
   constructor(private userService:UserRequestService) {
+   
    
    }
 
   ngOnInit() {
 
-  this.userService.userRequest()
+  this.userService.userRequest("Submit");
   this.user=this.userService.user
 
 }

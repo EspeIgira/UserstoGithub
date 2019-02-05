@@ -1,17 +1,17 @@
 <p class="info">
- Here you can enter any users you know from Github and be able to see there repositories created.
+ Here you can enter a username from Github and be able to see repositories created and so on.
 </p>
 
 <div class="container-fluid">
   <div class="row">
     <form>
       <div class="form-group">
-
-      <label for="uname"></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <div class="input">
+      <label for="name"></label>
+      <input type="text" placeholder="Enter Username" [(ngModel)]="Search"  name="name" required>
       <!--<button (click) = 'search(true)'> Search</button>-->
-      <button type="Submit" >Search</button>
-
+      <button  (click)='Submit(true)'>Search</button>
+    </div>
 
       <blockquote class="userinfo">
           <br><img src="{{user.avatar_url}}"><br>

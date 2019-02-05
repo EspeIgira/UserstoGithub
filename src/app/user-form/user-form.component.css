@@ -3,13 +3,16 @@ button {
     color:purple;
 }
 p{
-    color:white;  
+    color:black;  
     font-family: 'Arial Narrow Bold';
-     
+    text-decoration-style: solid;
 }
 .info{
     font-style: uppercase; 
+    color:black;
+   
 }
+
 img{
    border: 3px solid #f1f1f1;
    border-radius: 50%;     

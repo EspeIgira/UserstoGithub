@@ -8,13 +8,17 @@ import {UserApi} from '../user-api';
 })
 export class UserRequestService {
   user:UserApi;
+ 
 
   constructor(private http:HttpClient) {
     this.user=new UserApi("",0,0,0,"","","");
    }
   
 
-userRequest(){
+userRequest(submit){
+
+  var userInput =submit;
+
 
 interface ApiResponse{
   avatar_url:string;
@@ -24,10 +28,11 @@ interface ApiResponse{
   following:number;
   location:string;
   html_url:string;
+
       
 }
 let promise =new Promise((resolve,reject)=>{
-  this.http.get<ApiResponse>('https://api.github.com/users/EspeIgira').toPromise().then(response=>{
+  this.http.get<ApiResponse>('https://api.github.com/users/'+  userInput + '?access_token=' +environment.apiKey).toPromise().then(response=>{
            
   this.user.avatar_url=response.avatar_url
   this.user.name=response.name
@@ -43,8 +48,8 @@ let promise =new Promise((resolve,reject)=>{
 },
   error=>{
     this.user.avatar_url=""
-    this.user.name=""
-    this.user.public_repos=0
+    this.user.name="EspeIgira"
+    this.user.public_repos=17
     this.user.followers=0
     this.user.following=0
     this.user.location=""
