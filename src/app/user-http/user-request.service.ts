@@ -49,7 +49,7 @@ let promise =new Promise((resolve,reject)=>{
   error=>{
     this.user.avatar_url=""
     this.user.name="EspeIgira"
-    this.user.public_repos=17
+    this.user.public_repos=0
     this.user.followers=0
     this.user.following=0
     this.user.location=""
