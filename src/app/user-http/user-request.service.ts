@@ -32,7 +32,7 @@ interface ApiResponse{
       
 }
 let promise =new Promise((resolve,reject)=>{
-  this.http.get<ApiResponse>('https://api.github.com/users/'+  userInput + '?access_token=' +environment.apiKey).toPromise().then(response=>{
+  this.http.get<ApiResponse>('https://api.github.com/users/'+  userInput + '?access_token=e63a9bdb479d2b8e6ce5b99dbd8009451c736351').toPromise().then(response=>{
            
   this.user.avatar_url=response.avatar_url
   this.user.name=response.name

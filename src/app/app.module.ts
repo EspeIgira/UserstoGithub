@@ -9,14 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { StrikethroughDirective } from './strikethrough.directive';
-import { UserDetailsComponent } from './user-details/user-details.component';
+//import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserFormComponent,
     StrikethroughDirective,
-    UserDetailsComponent
+   // UserDetailsComponent
   ],
   imports: [
     BrowserModule,
