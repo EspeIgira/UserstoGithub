@@ -32,7 +32,7 @@ export class UserFormComponent implements OnInit{
 
   ngOnInit() {
 
-  this.userService.userRequest("Submit");
+  this.userService.userRequest("EspeIgira");
   this.user=this.userService.user
 
 }
